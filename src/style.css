@@ -1,0 +1,15 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+}
+
+.container {
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  top: 20px;
+  left: 0;
+  right: 0;
+}
+
+
