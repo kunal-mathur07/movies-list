@@ -1,6 +1,7 @@
-*{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #fff;
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fff;
+  color: gray;
 }
 
 .container {
@@ -10,6 +11,55 @@
   top: 20px;
   left: 0;
   right: 0;
+  padding: 14px 14px;
 }
 
+.search-bar {
+  width: 768px;
+  display: flex;
+  margin: 0 auto;
+  padding: 5px;
+}
 
+.search-bar #movie-input {
+  width: 70%;
+  line-height: 1.25rem;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+.search-bar #search-button {
+  margin-left: 5px;
+  width: 30%;
+  height: 32px;
+  outline: none;
+  border: none;
+  background-color: gold;
+  border-radius: 5px;
+  color: #000;
+}
+.results-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+
+.movie-img img {
+  width: 300px;
+}

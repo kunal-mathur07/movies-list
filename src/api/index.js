@@ -1,24 +1,26 @@
 import {apiUrls} from "./constants";
 
 
-export function getMovies(params){
+export async function getMovies(params){
     let movies = [];
     try{
          let resp = await fetch(`${apiUrls.getMovies}${params}`)  
          let searchResults = await resp.json();
-         movies = searchResults.Search; 
+         movies = searchResults.Search;
+         return movies 
     }catch(ex){
-       return movies;     
+       return movies = "error";     
     }
 }
 
-export function getMovieDetails(params){
-    let moviDetails;
+export async function getMovieDetails(params){
+    let movieDetails;
     try{
          let resp = await fetch(`${apiUrls.getMovieDetails}${params}`)  
          let details = await resp.json();
-         moviDetails = details; 
+         movieDetails = details; 
+         return movieDetails;
     }catch(ex){
-       return movies;     
+       return movieDetails = "error";     
     }
 }

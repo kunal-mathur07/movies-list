@@ -1,3 +1,4 @@
+import { getMovies } from "./api";
 import SearchBar from "./components/searchBar";
 import SearchResults from "./components/searchResults";
 import "./style.css"
@@ -10,13 +11,17 @@ const mainTemplate = `<div class="container">
 function renderMain(element,props={}){
     let app = document.getElementById(element);
     app.innerHTML = mainTemplate;
+}
 
+async function getMoviesResult(movieName){
+    let movies = await getMovies(movieName);
+    SearchResults("results-container",{movies})
 }
 
 function init(){
     renderMain("app");
-    SearchBar("search-container");
-    SearchResults("results-container")
+    SearchBar("search-container",{getMoviesResult});
+    SearchResults("results-container",{movies:[]})
 }
 
 init();
