@@ -1,4 +1,5 @@
 import { MovieDetails } from "./movieDetails";
+import noImage from "../../../assets/no-image.svg";
 export default function Card(domNode, props = {}) {
   const { movies, getDetails } = props;
   let element = document.getElementById(domNode);
