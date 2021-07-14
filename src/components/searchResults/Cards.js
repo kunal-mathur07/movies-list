@@ -2,6 +2,7 @@ import { MovieDetails } from "./movieDetails";
 export default function Card(domNode, props = {}) {
   const { movies, getDetails } = props;
   let element = document.getElementById(domNode);
+  element.innerHTML = "";
 
   // Loop over the resultset to create movie cards and add the show and hide detail links.
   movies.forEach((movie) => {
